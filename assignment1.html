@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>Monina Nepomuceno's HCDE 439 Physical Computing Page!</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,13 +12,34 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 1!</h1>
-            <p>
-            <img src="red-panda.jpg" width=400></a>
-            </p>
-            <p>
-            Here is all the documentation for assignment 1!
-            </p>
+            <h1>Monina's Assignment 1!</h1>
+            <img src="blinky.gif" width=400>
+            <p>A gif of the circuit.</p>
+            <img src="blinkimg.jpg" width=400>
+            <p>A picture of the circuit</p>
+            <img src="schema.jpg" width=400>
+            <p>The schema of the circuit. 1K resistors were chosen as the resistance required was 160 Ohms for the circuit to have a current of 20mA, which is ideal for LEDS.</p>
+            <pre><code>
+// the setup function runs once when you press reset or power the board
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);  // initialize digital pin LED_BUILTIN (red) as an output.
+  pinMode(8, OUTPUT);            // initialize digital pin 8  (yellow) as an output.
+  pinMode(7, OUTPUT);            // initialize digital pin 7 (red) as an output.
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH); // turn the red LED on (HIGH is the voltage level)
+  digitalWrite(7, HIGH);           // turn the red LED on
+  digitalWrite(8, LOW);            // turn the yellow LED off by making voltage LOW
+  delay(500);                      // wait for .5 second
+  digitalWrite(LED_BUILTIN, LOW);  // turn the red LED off  
+  digitalWrite(7, LOW);            // turn the red LED off
+  digitalWrite(8, HIGH);           // turn the yellow LED on
+  delay(500);                      // wait for .5 second
+}
+            </code></pre>
+            <p>The code snippet for the circuit.
         </div>
         
     </body>
